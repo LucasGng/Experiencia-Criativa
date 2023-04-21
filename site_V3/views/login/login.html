@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block content %}
+<div><a href="/login/usuario_list">usuários cadastrados</a><br><br></div>
+<form action="login_action" method="POST">
+<table>
+    
+    <tr>
+        <td>E-mail</td>
+        <td><input placeholder="Login" type="text" name="email"></td>
+    </tr>
+    <tr>
+        <td>Senha</td>
+        <td><input placeholder="Senha" type="text" name="password"></td>
+    </tr>
+
+</table>
+
+<input  type="submit"  value="Logar">
+</form>
+
+<div><a href="/login/register_form">Cadastre-se</a></div>
+{% endblock %}

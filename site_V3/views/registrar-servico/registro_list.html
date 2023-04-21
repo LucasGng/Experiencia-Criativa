@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+<h1>Registros</h1>
+<ul>
+    {% if servicos|length > 0 %}
+        {% for servico in servicos %}
+        <li>{{ servicos[servico] }}<br/><br>{{ datas[servico] }} </li>
+        {% endfor %}
+    {% else %}
+        <li>Ainda não existem serviços registrados!</li>
+    {% endif %}
+</ul>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block content %}
+ 
+<form action="registro_action" method="POST">
+<table>
+    
+    <tr>
+        <td>Serviço solicitado</td>
+        <td><input placeholder="Serviço" type="text" name="serviço"></td>
+    </tr>
+    <tr>
+        <td>Data</td>
+        <td><input placeholder="data" type="date" name="data"></td>
+    </tr>
+
+</table>
+
+<input  type="submit"  value="Registrar">
+</form>
+{% endblock %}

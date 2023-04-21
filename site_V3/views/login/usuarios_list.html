@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+<h1>Registros</h1>
+<ul>
+    {% if usuarios|length > 0 %}
+        {% for usuario in usuarios %}
+        <li>Usuário: {{ usuarios[usuario] }}<br/> </li>
+        {% endfor %}
+    {% else %}
+        <li>Ainda não existem usuários registrados!</li>
+    {% endif %}
+</ul>
+{% endblock %}
