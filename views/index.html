@@ -1,75 +1,58 @@
 <html>
     <head>
         <meta charset="utf-8">
-        
-        <link rel="stylesheet" type="text/css" href="/static/index.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/pag_inicial/pagina_inicial.css">
+        <script src="/static/js/index.js"></script>
+        <script src="https://kit.fontawesome.com/3d83852bab.js" crossorigin="anonymous"></script>
+        <title>Experimento criativo v4</title>
     </head>
+      <!-- <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+  
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+  
+      botão para aparecer e sumir a sidebar -->
+    <body>
 
-    <body class="body">
-        <!--  cod base  -->
-                    <!--    =-=-=-=-=-=-=-=-=   cabecalho  =-=-=-=-=-=-=-=-=     -->
-        <!-- <img src="imagens/icone.png"  alt=""> -->
-        <div class="header">
-
-            <div class="slogan">
-                
-                Fimas estacionamentos e vagas
-
-            </div>
-            
-        </div>
-        
-        <div class="site">
-
-    <!--    =-=-=-=-=-=-=-=-=   logo  =-=-=-=-=-=-=-=-=     -->
-
-            <div class="left-bar" > 
-                <!-- <div class="trade-mark"><img src="/static/images/1.jpeg" alt=""></div>     temporario               -->
-
-
-    <!--    =-=-=-=-=-=-=-=-=  Left-bar   =-=-=-=-=-=-=-=-=     -->
-
-        <!-- colocar os hrefs menu -->
-
-                <div class="menu">
-                    <div class="menu_option"><a href="/login/login_form">Login</a></div>
-
-                    <div class="menu_option" ><a href="/pagina_inicial/pag_inicial">Pagina inicial</a></div>
-
-                    <div class="menu_option"><a href="/servico/registro_form">Registrar serviço</a></div>
-
-                    <div class="menu_option"><a href="/vagas/index_vagas">vagas disponiveis</a></div>
-
-                    <div class="menu_option"><a href="/servico/registro_list">Listar serviços</a></div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-    <!--    =-=-=-=-=-=-=-=-=  lugar p colocar os blocks content   =-=-=-=-=-=-=-=-=     -->
-
-            <div class="site_content" id="content">
-
-                {% block content %} 
-
-                <ul>
-                    <div class="trade-mark"><img src="/static/images/1.jpeg" alt=""></div>   
-                    <br>
-                    Um assistente de estacionamento inteligente capaz de detectar sua vaga para seu carro                 
-                </ul>
-                
-
-                {% endblock %}
-        
-            </div>
-
-                    <!--    =-=-=-=-=-=-=-=-=     =-=-=-=-=-=-=-=-=     -->
-        </div>
-
-
+      <header ><div class="header_name_img"></div><div class="header_text">Fimas estacionamentos</div></header>
+<!--    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->
+      <aside class="sidebar">
+        <div class="sidebar_header"> <img src="/static/images/1.jpeg" height="150px" width="150px" alt=""> </div>
+        <a href="/pagina_inicial/pag_inicial" class="active">
+          <i class="fas fa-qrcode"></i>
+          <span>Painel</span>
+        </a>
+        <a href="/login/login_form">
+          <i class="fas fa-qrcode"></i>
+          <span>Login</span>
+        </a>
+        <a href="/servico/registro_form">
+          <i class="fas fa-qrcode"></i>
+          <span>Serviços</span>
+        </a>
+        <a href="/vagas/index_vagas">
+          <i class="fas fa-qrcode"></i>
+          <span>Vagas</span>
+        </a> 
+      </aside>
+<!--    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     -->
+      <main class="site_content" id="content">
+        {% block content %} 
+        {% endblock %}
+      </main>
+<!--    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=     --> 
+      <footer>
+        contato sla: <br>
+        <i class="fas fa-qrcode"></i>
+        <span>contato 1</span>
+        <i class="fas fa-qrcode"></i>
+        <span>contato 2</span>
+        <i class="fas fa-qrcode"></i>
+        <span>contato 3</span>
+      </footer>
+    </body>
 
 </html>
